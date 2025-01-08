@@ -17,9 +17,14 @@ typedef struct BaskStructure
     char message[MESSAGE_LIM];
 } BasckStruct;
 
+#pragma region BASK_INTERFACE
 struct BaskStructure calculateBask(float a, float b, float c);
 void drawData(struct BaskStructure data);
+#pragma endregion BASK_INTERFACE
 
+#pragma region MATH_BASES
+
+#pragma region BASK_IMPLEMENTATION
 struct BaskStructure calculateBask(float a, float b, float c)
 {
     BasckStruct data;
@@ -79,3 +84,4 @@ void drawData(struct BaskStructure data)
     printf("\nRoot 1:%f", data.root1);
     printf("\nRoot 2:%f", data.root2);
 }
+#pragma endregion BASK_IMPLENTATION
